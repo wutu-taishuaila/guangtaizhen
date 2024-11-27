@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/personal.css">
+  <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo"><img src="image/logo.png" height="90px" alt=""></a>
+    <ul class='topNav'>
+      <li><a href="index.html" class="dangqiang">首页</a></li>
+      <li><a href="play.html">游玩攻略</a></li>
+      <li><a href="qiangpiao.html">景点详情</a></li>
+    </ul>
+  </header>
+  <header>
+    <a href="#" class="logo"><img src="image/logo.png" height="90px" alt=""></a>
+    <ul class='topNav'>
+      <li><a href="#" class="dangqiang">首页</a></li>
+      <li><a href="play.html">游玩攻略</a></li>
+      <li><a href="qiangpiao.html">景点详情</a></li>
+    </ul>
+  </header>
+  <!-- Swiper -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide menu">
+        <ul class='leftNav'>
+          <li><span class="ion-person"></span>特色建筑</li>
+          <li><span class="ion-ios-list-outline"></span>英歌舞</li>
+        </ul>
+      </div>
+      <div class="swiper-slide content">
+        <div class="menu-button">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="main">
+          <div class="personal">
+            <br>
+            <!-- <header> -->
+            <h1>潮汕特色建筑</h1>
+            <!-- </header> -->
+            <hr>
+            <br>
+            <div class="p1">
+              <p>
+                潮汕传统建筑的立面装饰重点集中在上半部，采用凹凸变化形式线段，以突出建筑物的立体轮廓。厝角头（五行山墙）是潮汕最具代表性的建筑装饰，
+                <br>其形成深受五行学说影响，按形状不同可分为金、木、水、火和土五种形式。
+                <br>这些装饰不仅丰富了潮汕传统建筑立面的艺术效果，也体现了潮汕地区在建筑美学上的独特追求。
+                这些民居以宗祠为中心，次要建筑围绕宗祠展开，形成外部封闭而内部敞开的建筑群体，发展出“下山虎”、“百凤朝阳”、“四点金”、“五间过”、“驷马拖车”、“百鸟朝凰”等多种建筑形式。潮汕民居的特点包括中轴对称、
+                向心围合的天井为中心的民居建筑，以及将传统建筑文化与潮汕特有的传统工艺美术如金漆木雕、工艺石雕、嵌瓷艺术、金属工艺以及书法、绘画艺术等融合。
+              </p>
+            </div>
+            <br>
+            <div>
+              <img src="image\jz1.jpg" width="200px" height="150px">
+              <img src="image\jz2.jpg" width="200px" height="150px">
+              <img src="image\jz3.jpg" width="200px" height="150px">
+              <img src="image\jz4.jpg" width="200px" height="150px">
+            </div>
+            <!-- <div>
+              <div class="swiper-slide"><img src="image/3.jpg" alt="" srcset="" width="=200px"></div>
+              <div class="swiper-slide"><img src="image/10001.jfif" alt="" srcset="" width="200px"></div>
+              <div class="swiper-slide"><img src="image/10002.jfif" alt="" srcset="" width="200px"></div>
+            </div> -->
+          </div>
+          <div class="ticket printArea">
+            <h1>英歌舞</h1>
+            <hr>
+            <br>
+            <div class="p1">
+              <h>英歌舞集戏剧、舞蹈、武术于一体，具有独特的步法、身法、槌法、阵法。
+                <br>既似土风，又似武舞。它以刚劲、雄浑、粗犷、奔放的舞姿，构成了磅礴、威武、强壮、豪迈的气势，给人以力与美的震撼。英歌舞所表演的角色均为《水浒传》中的英雄豪杰，但表现手法十分概括写意，
+                <br>既不叙述故事情节也不表现人物，更多的是渲染战斗情景和热烈气氛，塑造英雄整体的形象。
+                通过人物造型、服饰道具、形体动态、音响节奏等艺术处理，从整体上体现一种男性的刚健之美。
+                英歌舞中的舞蛇是源自闽南民系对蛇的崇拜。
+              </h>
+            </div>
+            <div>
+              <img src="./image/ygw.jpg" alt="加载失败" width="200px" height="150px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="swiper/swiper-bundle.min.js"></script>
+  <script src="js/personal.js"></script>
+  <script>
+    let yzbj = document.querySelector('.yzbj');
+    window.addEventListener('scroll', () => {
+      let header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+    (function () {
+      if (localStorage.getItem('*') == '已登录') {
+        yzbj.innerHTML = '<a href="personal.html">个人信息</a>';
+      }
+    }())
+  </script>
+</body>
+
+</html>
